@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
-
-const MainWeather = () => {
-    const [city, setCity] = useState("Raguanan, Jakarta")
+const MainWeather = ({ cityName }) => {
     return (
         <div>
             <h1 className='text-3xl text-gray-500 text-center mb-8'>
-                Right now in <input type='text' className={'text-black text-center font-semibold border-b-2 border-gray-400 bg-transparent'} style={{ width: city.length ? city.length + "ch" : "1ch" }} value={city} onChange={e => setCity(e.target.value)} autoFocus />
-                , it's Couldy.
+                Right now in {cityName}, it's Couldy.
             </h1>
 
             <div className='flex gap-4 justify-center items-center'>
