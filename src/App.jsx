@@ -1,28 +1,21 @@
+import DayWeather from "./components/DayWeather";
+import MainWeather from "./components/MainWeather";
+
 function App() {
   return (
-    <>
-      <div
-        id="container"
-        className="w-full h-[100vh] flex flex-col items-center bg-slate-400"
-      >
-        <div
-          id="header"
-          className="w-full h-14 bg-slate-800 px-5 flex items-center"
-        >
-          <div id="logo">
-            <h1 className="text-3xl font-bold text-white">Weather App</h1>
-          </div>
-        </div>
-        <div id="content-box" className="w-1/2 h-full py-20 px-10 bg-slate-300">
-          <div
-            id="location"
-            className="w-full h-fit py-5 bg-slate-800 flex justify-center items-center"
-          >
-            <h1 className="text-3xl font-bold text-white">Location</h1>
+    <div className="container mx-auto py-8 max-w-screen-lg">
+      <div className="mockup-window bg-base-300 border">
+        <div className="bg-base-200 flex flex-col justify-center px-4 py-16 gap-16">
+          <MainWeather />
+          <div className="flex gap-12 justify-center">
+            <DayWeather />
+            <DayWeather />
+            <DayWeather />
+            <DayWeather />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
