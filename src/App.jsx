@@ -55,13 +55,13 @@ function App() {
   return (
     <div className="container mx-auto py-8 max-w-screen-lg px-8">
       <div className="mockup-window bg-base-300 border">
-        <div className="bg-base-200 flex flex-col justify-center px-4 py-16 gap-16">
+        <div className="bg-base-200 flex flex-col justify-center px-12 py-16 gap-16">
           <InputWeather city={city} setCity={setCity} startDate={startDate} setStartDate={setStartDate} endDate={endDate} setEndDate={setEndDate} />
           {
             loading ? (
               <div className="min-h-60 flex items-center justify-center">Loading ...</div>
             ) : (
-              <div className="flex flex-wrap gap-16 justify-center">
+              <div className="grid lg:grid-cols-2 gap-16 justify-center">
                 {
                   weather?.daily?.time?.map(
                     (element, index) => (
